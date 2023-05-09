@@ -1,0 +1,110 @@
+.header {
+  background-color: $color-background;
+  position: relative;
+  padding-top: 56.25%;
+
+  & > button.Primary,
+  button.Secondary {
+    top: 40rem;
+    position: absolute;
+
+    @include responsive(phone) {
+      top: 24rem;
+    }
+  }
+
+  & > button.Primary {
+    left: 4rem;
+  }
+
+  & > button.Secondary {
+    left: 17rem;
+
+    @include responsive(tab_port) {
+      left: 18.5rem;
+    }
+  }
+
+  @include responsive(phone) {
+    padding-top: 0;
+    height: 32rem;
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__container {
+    color: #fff;
+
+    @include responsive(phone) {
+      padding-left: 1rem;
+    }
+
+    &-heading {
+      font-size: 6rem;
+      position: absolute;
+      color: #fff;
+      top: 12rem;
+      left: 3.5rem;
+
+      @include responsive(phone) {
+        top: 7rem;
+        font-size: 3rem;
+      }
+    }
+
+    &-btnVolume {
+      position: absolute;
+      height: 3rem;
+      width: 3rem;
+      top: 40rem;
+      right: 14rem;
+
+      @include responsive(tab_medium) {
+        top: 30rem;
+      }
+      @include responsive(phone) {
+        top: 20rem;
+        right: 8rem;
+      }
+    }
+
+    &-overview {
+      top: 28rem;
+      left: 4rem;
+      position: absolute;
+      color: #fff;
+      width: 55rem;
+      line-height: 1.3;
+      padding-top: 2.5rem;
+      font-size: 1.8rem;
+
+      @include responsive(phone) {
+        top: 10rem;
+        width: 20rem;
+      }
+    }
+
+    &--fadeBottom {
+      position: absolute;
+      bottom: 0;
+      height: 10rem;
+      width: 100%;
+
+      background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(15, 15, 15, 0.61),
+        rgb(17, 17, 17),
+        rgb(17, 17, 17)
+      );
+
+      @include responsive(phone) {
+        height: 4rem;
+      }
+    }
+  }
+}
